@@ -45,11 +45,11 @@ class QuizBee extends Component {
               {this.state.questionBank.length > 0 &&
                 this.state.responses < 5 &&
                 this.state.questionBank.map(
-                ({question, answers, correct, questionById}) => (
+                ({question, answers, correct, questionId}) => (
                   <QuestionBox 
                   question={question}
                   options={answers} 
-                  key={questionById}
+                  key={questionId}
                   selected={answer => this.computeAnswer(answer, correct)}
                   />
                 )
