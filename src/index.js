@@ -23,10 +23,10 @@ class QuizBee extends Component {
       this.setState({
         score: this.state.score + 1
       });
-      this.setState({
-        responses: this.state.responses < 5 ? this.state.responses + 1 : 5
-      });
     }
+    this.setState({
+      responses: this.state.responses < 5 ? this.state.responses + 1 : 5
+    });
   }
   playAgain = () => {
     this.getQuestions();
